@@ -33,7 +33,6 @@ export class TubelightComponent implements AfterViewInit {
     { id: 5, path: '/five', icon: 'settings', label: 'Settings', disabled: false }
   ]
   @ViewChild('tubelight') tubelight!: ElementRef
-  @ViewChild('someInput') someInput!: ElementRef
 
   ngAfterViewInit() {
     this.tubelight.nativeElement.style.width = `${100 / this.links.length}%`
