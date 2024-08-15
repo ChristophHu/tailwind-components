@@ -1,0 +1,6 @@
+<div class="container mx-auto">
+    <h2 class="text-xl font-bold">Tabs</h2> 
+    <tablist [items]="list" labelField="username" [active]="active" (onTabSelect)="changeTab($event)"></tablist>
+    <br />
+    {{ active.desc }}
+</div>
