@@ -1,0 +1,32 @@
+.active
+    @apply relative bg-blue-300 text-accent
+
+    span
+        @apply block
+
+    
+
+    // &::before
+    //     @apply absolute top-0 h-[2px] w-full bg-blue-400
+    //     content: ''
+
+li
+    @apply relative
+    transition: background 0.4s linear
+
+    span
+        @apply hidden
+
+    // &:hover
+    //     icons
+    //         @apply text-blue-400
+
+    //     &::before
+    //         @apply absolute top-0 h-[2px] w-full bg-blue-400
+    //         content: ''
+
+.indicator
+    @apply relative block
+    &::before
+        @apply absolute h-2 w-2 top-0 right-0 bg-red-400 rounded-full
+        content: ''
