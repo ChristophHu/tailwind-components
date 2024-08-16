@@ -3,8 +3,10 @@
         <icons class="w-8 h-8" name="add"></icons>
     </div>
     <ul>
-        <li>
-            <div class="test absolute block top-0 h-12 w-12 right-0 bg-red-500 transition rounded-full z-30 cursor-pointer" #red>Test</div>
+        <li *ngFor="let link of links" class="">
+            <div class="test absolute block top-0 h-12 w-12 right-0 bg-red-500 transition rounded-full z-30 cursor-pointer" #red>
+                <span>Test</span>
+            </div>
         </li>
     </ul>
 </div>

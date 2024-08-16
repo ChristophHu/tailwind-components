@@ -1,17 +1,15 @@
-<!-- <div class="absolute h-full bottom-0"> -->
-  <nav class="relative h-20 w-96 bg-gray-900 rounded-lg overflow-hidden">
-    <ul class="flex h-full w-full justify-around items-center">
-      <li class="h-8 w-8 cursor-pointer" *ngFor="let link of links; index as i">
-        <a class="block flex flex-col h-full w-full justify-center items-center strike-1.5 text-gray-500" [routerLink]="[link.path]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="setActive(i)">
-          <icons class="w-8 h-8" [name]="link.icon"></icons>
-          <span class="sr-only">{{ link.label }}</span>
-        </a>
-      </li>
-    </ul>
-  
-    <div class="tubelight absolute left-0 px-4 top-1 h-1" #tubelight>
-      <div class="light h-full w-full bg-white rounded-full"></div>
-      <div class="light-ray absolute left-0 top-1 w-full h-16 pointer-events-none"></div>
-    </div>
-  </nav>  
-<!-- </div> -->
+<nav class="relative h-20 w-96 bg-gray-900 rounded-lg overflow-hidden">
+  <ul class="flex h-full w-full justify-around items-center">
+    <li class="h-8 w-8 cursor-pointer" *ngFor="let link of links; index as i">
+      <a class="block flex flex-col h-full w-full justify-center items-center strike-1.5 text-gray-500" [routerLink]="[link.path]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="setActive(i)">
+        <icons class="w-8 h-8" [name]="link.icon"></icons>
+        <span class="sr-only">{{ link.label }}</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="tubelight absolute left-0 px-4 top-1 h-1" #tubelight>
+    <div class="light h-full w-full bg-white rounded-full"></div>
+    <div class="light-ray absolute left-0 top-1 w-full h-16 pointer-events-none"></div>
+  </div>
+</nav>  

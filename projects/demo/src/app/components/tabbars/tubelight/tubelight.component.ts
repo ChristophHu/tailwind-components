@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, Input, TemplateRef, ViewChild } f
 import { IconsComponent } from '../../../shared/components/icons/icons.component'
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router'
 import { NgFor } from '@angular/common'
+import { RadialFloatingMenuComponent } from '../radial-floating-menu/radial-floating-menu.component'
 
 interface Link {
   id: number
@@ -17,6 +18,7 @@ interface Link {
   imports: [
     IconsComponent,
     NgFor,
+    RadialFloatingMenuComponent,
     RouterModule,
     RouterLink,
     RouterLinkActive

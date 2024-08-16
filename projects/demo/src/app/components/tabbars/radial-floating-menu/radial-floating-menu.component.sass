@@ -1,0 +1,40 @@
+.animation 
+	transition: all 600ms ease-in-out
+
+// .size
+// 	@apply h-12 w-12 rounded-full
+
+.radial 
+	@apply relative grid h-12 w-12 top-24 left-24 place-items-center rounded-full
+	
+	+.open
+		@apply scale-75
+	// &:hover
+	// 	.radial-button
+	// 		@apply opacity-100 delay-100
+	// 		offset-distance: 100%
+	// 		@for $i from 1 through 5 
+	// 			&-#{$i} 
+	// 				offset-distance: $i * (70% / 5)
+	// 				icons 
+	// 					transition-delay: $i * 150ms
+	// 					opacity: 1
+	// 					scale: 0.7
+	
+	button
+		@apply relative grid h-12 w-12 m-0 p-0 place-items-center bg-red-500 rounded-full z-20 cursor-pointer
+		icons 
+			width: 3rem * 0.5
+			height: 3rem * 0.5
+	
+	.radial-button
+		@apply absolute -top-14 -left-14 opacity-0 z-10
+		offset-path: path("m.5,91.21c4.89,40.97,40.37,72.55,82.95,71.26,41.84-1.27,76.17-34.8,78.36-76.6C164.26,39.15,127.1.5,80.92.5,49.47.5,22.2,18.43,8.78,44.62.15,61.48,12.48,81.5,31.42,81.5h49.5")
+		offset-distance: 100%
+		offset-rotate: 0deg
+		@extend .animation
+		icons
+			// @apply opacity-0
+			opacity: 0
+			scale: 0
+			@extend .animation

@@ -1,5 +1,5 @@
 <ul class="nav nav-tabs">
-    <li *ngFor="let tab of items" [ngClass]="{'active': tab.id === active?.id}" (click)="select(tab)">
-        <a>{{tab.label || tab[labelField]}}</a>
+    <li *ngFor="let tab of items" [ngClass]="{ 'active': tab.id === active?.id }" (click)="select(tab)">
+        <a>{{ tab.label || tab[labelField] }}</a>
     </li>
 </ul>

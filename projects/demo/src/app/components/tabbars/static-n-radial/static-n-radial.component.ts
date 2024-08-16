@@ -1,18 +1,22 @@
-import { Component, ElementRef, ViewChild, viewChild } from '@angular/core'
+import { Component, ElementRef, Input, ViewChild, viewChild } from '@angular/core'
 import { IconsComponent } from '../../../shared/components/icons/icons.component'
-import { NgIf } from '@angular/common'
+import { NgFor, NgIf } from '@angular/common'
 
 @Component({
   selector: 'static-n-radial',
   standalone: true,
   imports: [
     IconsComponent,
+    NgFor,
     NgIf
   ],
   templateUrl: './static-n-radial.component.html',
   styleUrl: './static-n-radial.component.sass'
 })
 export class StaticNRadialComponent {
+  @Input() links: any[] = [
+    { icon: 'home', link: 'home' }
+  ]
   isOpen: boolean = false
   @ViewChild('red') red!: ElementRef
 
